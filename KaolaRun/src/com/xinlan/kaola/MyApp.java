@@ -59,10 +59,7 @@ public class MyApp implements ApplicationListener
         }
     };
     private Array<Rectangle> tiles = new Array<Rectangle>();
-
     private static final float GRAVITY = -2.5f;
-    private Vector2 tmp = new Vector2();
-
     @Override
     public void create()
     {
@@ -84,6 +81,8 @@ public class MyApp implements ApplicationListener
         map = new TmxMapLoader()
                 .load("asset/level1.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 1 / 16f);
+        
+        //renderer.getSpriteBatch()
 
         // create an orthographic camera, shows us 30x20 units of the world
         camera = new OrthographicCamera();
